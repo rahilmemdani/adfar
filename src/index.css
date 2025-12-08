@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FADADD;
+  --color-secondary: #FAFAFA;
+  --color-accent: #F5F5DC;
+  --color-text: #333333;
+  --color-text-light: #666666;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Custom base styles if needed, but Tailwind v4 handles reset automatically via @import "tailwindcss" */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
