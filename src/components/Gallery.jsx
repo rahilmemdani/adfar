@@ -9,8 +9,8 @@ const Gallery = () => {
     const galleryItems = [
         {
             id: 1,
-            type: 'video',
-            src: 'https://assets.mixkit.co/videos/preview/mixkit-couple-walking-in-the-beach-at-sunset-4045-large.mp4',
+            type: 'image',
+            src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80',
             className: 'md:col-span-2 md:row-span-2',
             title: "Sunset Walks"
         },
@@ -38,7 +38,7 @@ const Gallery = () => {
         {
             id: 5,
             type: 'image',
-            src: 'https://images.unsplash.com/photo-1511285560982-1351cdeb9821?auto=format&fit=crop&q=80',
+            src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80',
             className: 'md:col-span-2 md:row-span-1',
             title: "Celebration"
         }

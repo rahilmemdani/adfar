@@ -15,7 +15,7 @@ function App() {
       <Story />
       <Events />
       <Gallery />
-      <VideoHighlights />
+      {/* <VideoHighlights /> */}
       <RSVP />
       {/* <Travel /> */}
       <Footer />
