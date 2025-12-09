@@ -122,7 +122,13 @@ const Story = () => {
                     </div>
 
                     {/* --- Mobile Left Line --- */}
-                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-pink-200/50 md:hidden"></div>
+                    <motion.div
+                        initial={{ height: 0 }}
+                        whileInView={{ height: '100%' }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.5, ease: "easeInOut" }}
+                        className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pink-200 via-primary/50 to-pink-200 md:hidden origin-top"
+                    ></motion.div>
 
                     <div className="space-y-16 md:space-y-32 relative">
                         {/* Decorative Top Heart - Desktop */}
@@ -143,23 +149,38 @@ const Story = () => {
                                 <div className="flex md:hidden w-full relative pl-20">
                                     {/* Mobile Icon on Line */}
                                     {/* Fixed: Aligned to left-8 to match the vertical line */}
-                                    <div className="absolute left-8 top-0 transform -translate-x-1/2 z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-pink-100">
+                                    <motion.div
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: 0.2, type: "spring" }}
+                                        className="absolute left-8 top-0 transform -translate-x-1/2 z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(236,72,153,0.3)] border-2 border-pink-200"
+                                    >
                                         <div className="text-primary scale-75">
                                             {item.icon}
                                         </div>
-                                    </div>
+                                    </motion.div>
 
                                     {/* Mobile Card */}
-                                    <div className="w-full bg-white p-6 rounded-[1.5rem] shadow-[0_5px_20px_-5px_rgba(250,218,221,0.5)] border border-pink-50 relative">
+                                    <motion.div
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: 0.4, duration: 0.6 }}
+                                        whileHover={{ scale: 1.02 }}
+                                        className="w-full bg-white/80 backdrop-blur-sm p-6 rounded-[1.5rem] shadow-[0_8px_30px_-5px_rgba(250,218,221,0.6)] border border-pink-50 relative overflow-hidden"
+                                    >
                                         <div className="absolute top-0 left-0 w-full h-full border border-pink-100/50 rounded-[1.5rem] m-1 pointer-events-none" />
-                                        <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] mb-2 block">
+                                        <div className="absolute -right-4 -top-4 w-16 h-16 bg-pink-50 rounded-full blur-2xl opacity-50" />
+
+                                        <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] mb-2 block relative z-10">
                                             {item.date}
                                         </span>
-                                        <h3 className="text-xl font-heading text-gray-800 mb-2">{item.title}</h3>
-                                        <p className="text-gray-500 text-sm font-light leading-relaxed italic">
+                                        <h3 className="text-xl font-heading text-gray-800 mb-2 relative z-10">{item.title}</h3>
+                                        <p className="text-gray-500 text-sm font-light leading-relaxed italic relative z-10">
                                             "{item.description}"
                                         </p>
-                                    </div>
+                                    </motion.div>
                                 </div>
 
 
