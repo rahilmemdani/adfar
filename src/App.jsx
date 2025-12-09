@@ -17,7 +17,7 @@ function App() {
       <Gallery />
       <VideoHighlights />
       <RSVP />
-      <Travel />
+      {/* <Travel /> */}
       <Footer />
     </div>
   );

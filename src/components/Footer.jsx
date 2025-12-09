@@ -15,10 +15,10 @@ const Footer = () => {
                     <Twitter className="w-5 h-5" />
                 </a>
             </div>
-
+            {/* 
             <p className="flex items-center justify-center gap-2 text-text-light text-sm font-medium">
                 Made with <Heart className="w-4 h-4 text-red-400 fill-current animate-pulse" /> by <span className="font-bold text-text">Antigravity</span>
-            </p>
+            </p> */}
         </footer>
     );
 };
