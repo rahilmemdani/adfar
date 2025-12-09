@@ -38,7 +38,7 @@ const Story = () => {
 
                 {/* Meet the Couple - Classical Wedding Style */}
                 <div className="flex flex-col gap-24 mb-32">
-                    {/* Farhaan */}
+                    {/* Farhan */}
                     <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
@@ -51,7 +51,7 @@ const Story = () => {
                                 <div className="absolute inset-0 border border-gray-200 m-2 pointer-events-none" />
                                 <img
                                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
-                                    alt="Farhaan"
+                                    alt="Farhan"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
@@ -63,7 +63,7 @@ const Story = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="w-full md:w-1/2 text-center md:text-left relative"
                         >
-                            <h3 className="text-5xl md:text-6xl font-heading font-medium text-text mb-4">Farhaan</h3>
+                            <h3 className="text-5xl md:text-6xl font-heading font-medium text-text mb-4">Farhan</h3>
                             <div className="w-16 h-px bg-primary mb-6 mx-auto md:mx-0" />
                             <p className="text-xl md:text-2xl font-heading italic text-primary/80 mb-6 font-light">
                                 "The one who brings the coffee and the bad jokes."

@@ -152,7 +152,7 @@ const Hero = () => {
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6 mb-6 md:mb-10 w-full">
                     <AnimatedText
-                        text="Farhaan"
+                        text="Farhan"
                         className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold drop-shadow-2xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80"
                     />
                     <motion.span
