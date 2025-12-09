@@ -6,7 +6,7 @@ const Story = () => {
     const milestones = [
         {
             title: "First Met",
-            date: "June 15, 2022",
+            date: "December 15, 2022",
             description: "A chance encounter at a coffee shop that changed everything.",
             icon: <MapPin className="w-6 h-6 text-white" />,
         },
@@ -36,69 +36,162 @@ const Story = () => {
                     Our Story
                 </motion.h2>
 
-                {/* Bride & Groom Cards */}
-                <div className="flex flex-col md:flex-row justify-center gap-10 mb-20">
-                    {['Groom', 'Bride'].map((role, index) => (
+                {/* Meet the Couple - Classical Wedding Style */}
+                <div className="flex flex-col gap-24 mb-32">
+                    {/* Farhaan */}
+                    <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
                         <motion.div
-                            key={role}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
-                            whileHover={{ y: -10 }}
-                            className="bg-white/40 backdrop-blur-xl p-10 rounded-[2rem] shadow-2xl w-full md:w-1/3 border border-white/60 hover:shadow-pink-100/50 transition-all duration-500"
+                            transition={{ duration: 0.8 }}
+                            className="w-full md:w-1/2 flex justify-center"
                         >
-                            <div className="w-40 h-40 mx-auto bg-gray-100 rounded-full mb-8 overflow-hidden border-4 border-white shadow-lg">
-                                {/* Placeholder Image */}
-                                <div className="w-full h-full bg-gradient-to-br from-primary to-pink-200 opacity-80"></div>
+                            <div className="relative w-3/4 aspect-[3/4] p-4 bg-white shadow-2xl rotate-[-3deg] hover:rotate-0 transition-transform duration-700">
+                                <div className="absolute inset-0 border border-gray-200 m-2 pointer-events-none" />
+                                <img
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+                                    alt="Farhaan"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
-                            <h3 className="text-3xl font-heading font-bold text-center mb-4 text-text">{role === 'Groom' ? 'Aarav' : 'Ananya'}</h3>
-                            <p className="text-center text-text-light text-lg font-light leading-relaxed italic">
-                                {role === 'Groom'
-                                    ? "The one who brings the coffee and the bad jokes."
-                                    : "The one who brings the sunshine and the laughter."}
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="w-full md:w-1/2 text-center md:text-left relative"
+                        >
+                            <h3 className="text-5xl md:text-6xl font-heading font-medium text-text mb-4">Farhaan</h3>
+                            <div className="w-16 h-px bg-primary mb-6 mx-auto md:mx-0" />
+                            <p className="text-xl md:text-2xl font-heading italic text-primary/80 mb-6 font-light">
+                                "The one who brings the coffee and the bad jokes."
+                            </p>
+                            <p className="text-gray-500 font-light leading-relaxed max-w-md mx-auto md:mx-0">
+                                Always searching for the perfect brew and the perfectly timed pun. He believes love is about finding someone who laughs at your jokes, even when they aren't funny.
                             </p>
                         </motion.div>
-                    ))}
+                    </div>
+
+                    {/* Adeena */}
+                    <div className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24">
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="w-full md:w-1/2 flex justify-center"
+                        >
+                            <div className="relative w-3/4 aspect-[3/4] p-4 bg-white shadow-2xl rotate-[3deg] hover:rotate-0 transition-transform duration-700">
+                                <div className="absolute inset-0 border border-gray-200 m-2 pointer-events-none" />
+                                <img
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop"
+                                    alt="Adeena"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="w-full md:w-1/2 text-center md:text-right relative"
+                        >
+                            <h3 className="text-5xl md:text-6xl font-heading font-medium text-text mb-4">Adeena</h3>
+                            <div className="w-16 h-px bg-primary mb-6 mx-auto md:ml-auto md:mr-0" />
+                            <p className="text-xl md:text-2xl font-heading italic text-primary/80 mb-6 font-light">
+                                "The one who brings the sunshine and the laughter."
+                            </p>
+                            <p className="text-gray-500 font-light leading-relaxed max-w-md mx-auto md:ml-auto md:mr-0">
+                                A radiant soul who lights up every room she enters. She believes love is about growing together and finding joy in the smallest of moments.
+                            </p>
+                        </motion.div>
+                    </div>
                 </div>
 
-                {/* Timeline */}
+                {/* Timeline - Wedding Theme */}
                 <div className="relative mt-32">
-                    {/* Vertical Line */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary to-transparent"></div>
+                    {/* --- Desktop Central Line --- */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-pink-200/50 hidden md:block">
+                        <motion.div
+                            // style={{ height: lineHeight }}
+                            className="w-full bg-primary origin-top"
+                        />
+                    </div>
 
-                    <div className="space-y-12">
+                    {/* --- Mobile Left Line --- */}
+                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-pink-200/50 md:hidden"></div>
+
+                    <div className="space-y-16 md:space-y-32 relative">
+                        {/* Decorative Top Heart - Desktop */}
+                        <div className="hidden md:flex absolute -top-12 left-1/2 transform -translate-x-1/2 z-10 justify-center">
+                            <Heart className="w-8 h-8 text-primary fill-pink-100 animate-pulse" />
+                        </div>
+
                         {milestones.map((item, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6 }}
-                                className={`flex items-center justify-between ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                                    }`}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.8 }}
+                                className={`flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                             >
-                                <div className="w-5/12"></div>
+                                {/* --- Mobile View Structure --- */}
+                                <div className="flex md:hidden w-full relative pl-20">
+                                    {/* Mobile Icon on Line */}
+                                    {/* Fixed: Aligned to left-8 to match the vertical line */}
+                                    <div className="absolute left-8 top-0 transform -translate-x-1/2 z-10 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-pink-100">
+                                        <div className="text-primary scale-75">
+                                            {item.icon}
+                                        </div>
+                                    </div>
 
-                                {/* Icon */}
-                                <div className="z-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl border border-pink-100">
-                                    <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    {/* Mobile Card */}
+                                    <div className="w-full bg-white p-6 rounded-[1.5rem] shadow-[0_5px_20px_-5px_rgba(250,218,221,0.5)] border border-pink-50 relative">
+                                        <div className="absolute top-0 left-0 w-full h-full border border-pink-100/50 rounded-[1.5rem] m-1 pointer-events-none" />
+                                        <span className="text-primary font-bold tracking-[0.2em] uppercase text-[10px] mb-2 block">
+                                            {item.date}
+                                        </span>
+                                        <h3 className="text-xl font-heading text-gray-800 mb-2">{item.title}</h3>
+                                        <p className="text-gray-500 text-sm font-light leading-relaxed italic">
+                                            "{item.description}"
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                {/* --- Desktop View Structure (Hidden on Mobile) --- */}
+
+                                {/* Date/Content Side */}
+                                <div className={`hidden md:block w-5/12 ${index % 2 === 0 ? 'text-right' : 'text-left'} text-center`}>
+                                    <div className={`inline-block p-8 bg-white rounded-[2rem] shadow-[0_10px_40px_-10px_rgba(250,218,221,0.5)] border border-pink-50 relative group hover:-translate-y-2 transition-transform duration-500`}>
+
+                                        {/* Classic Ornament details */}
+                                        <div className="absolute top-0 left-0 w-full h-full border-2 border-pink-100 rounded-[2rem] m-2 pointer-events-none opacity-50" />
+
+                                        <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">
+                                            {item.date}
+                                        </span>
+                                        <h3 className="text-3xl font-heading text-gray-800 mb-4">{item.title}</h3>
+                                        <p className="text-gray-500 font-light leading-relaxed italic">
+                                            "{item.description}"
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Center Icon */}
+                                <div className="hidden md:flex z-10 w-16 h-16 bg-white rounded-full items-center justify-center shadow-xl border-4 border-pink-50 relative">
+                                    <div className="absolute inset-0 rounded-full border border-pink-100 m-1 animate-[spin_8s_linear_infinite]" />
+                                    <div className="text-primary">
                                         {item.icon}
                                     </div>
                                 </div>
 
-                                <div className="w-5/12">
-                                    <motion.div
-                                        whileHover={{ scale: 1.02 }}
-                                        className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
-                                    >
-                                        <span className="text-sm text-primary font-bold uppercase tracking-[0.2em] mb-2 block">
-                                            {item.date}
-                                        </span>
-                                        <h3 className="text-2xl font-heading font-bold mb-3 text-text">{item.title}</h3>
-                                        <p className="text-text-light font-light leading-relaxed">{item.description}</p>
-                                    </motion.div>
-                                </div>
+                                {/* Empty Side for Balance */}
+                                <div className="hidden md:block w-5/12" />
                             </motion.div>
                         ))}
                     </div>
